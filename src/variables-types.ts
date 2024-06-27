@@ -60,7 +60,7 @@ let libro1 = {
     peso: 0.45,
     disponible: true
   };
-  
+   
   let libro4 = {
     titulo: "El Amor y Otras Historias",
     autor: "Carlos Ruiz",

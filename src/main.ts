@@ -6,7 +6,7 @@ const tienda = new BookStore();
 
 function mostrarMenu() {
     console.log("\n--- Menú de Opciones ---");
-    console.log("1. Insertar libro");
+    console.log("1. Agregar libro");
     console.log("2. Buscar libro");
     console.log("3. Eliminar libro");
     console.log("4. Abastecer libro");
@@ -20,11 +20,10 @@ function manejarOpcion(opcion: number): boolean {
         case 1:
             const isbn = prompt('ISBN: ');
             const titulo = prompt('Título: ');
-            const imagen = prompt('Imagen: ');
             const precioCompra = parseFloat(prompt('Precio de compra: '));
             const precioVenta = parseFloat(prompt('Precio de venta: '));
             const cantidadActual = parseInt(prompt('Cantidad actual: '), 10);
-            const libro = new Book(isbn, titulo, imagen, precioCompra, precioVenta, cantidadActual);
+            const libro = new Book(isbn, titulo, precioCompra, precioVenta, cantidadActual);
             tienda.agregarLibro(libro);
             console.log('Libro agregado exitosamente.');
             break;

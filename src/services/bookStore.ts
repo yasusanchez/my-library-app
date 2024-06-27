@@ -4,7 +4,7 @@ import { transaction } from '../models/transaction';
 export class BookStore {
     private catalogo: Book [] = []
     private transacciones: { [isbn: string]: transaction[]} = {};
-    private caja: number = 1000000;
+    private caja: number = 0;
 
     agregarLibro(libro: Book): void {
         if (!this.catalogo.find(b => b.isbn === libro.isbn)) {
